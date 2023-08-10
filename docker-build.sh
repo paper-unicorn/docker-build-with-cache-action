@@ -358,7 +358,7 @@ build_image() {
   set -o pipefail
   set -x
   # shellcheck disable=SC2068,SC2086
-  DOCKER-BUILDKIT=0 docker build \
+  DOCKER_BUILDKIT=0 docker build \
     $cache_from \
     --tag "$DUMMY_IMAGE_NAME" \
     --file "${INPUT_CONTEXT}"/"${INPUT_DOCKERFILE}" \
