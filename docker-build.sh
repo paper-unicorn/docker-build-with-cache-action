@@ -364,7 +364,7 @@ build_image() {
     --file "${INPUT_CONTEXT}"/"${INPUT_DOCKERFILE}" \
     ${INPUT_BUILD_EXTRA_ARGS} \
     "${extra_args[@]}" \
-    "${INPUT_CONTEXT}" | tee "$BUILD_LOG"
+    "${INPUT_CONTEXT}" 2>&1 | tee "$BUILD_LOG"
   set +x
 }
 
